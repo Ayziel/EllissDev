@@ -1,0 +1,135 @@
+@import "../tools/mixins";
+
+.project {
+  padding-left: $leftPaddingPc;
+  position: relative;
+  margin-top: $topmarginPc;
+  @include mobile {
+    padding: 0 $leftPaddingSp 0 $leftPaddingSp;
+    min-width: 0;
+    margin-top: 0;
+  }
+
+  &::before {
+    content: "WORK";
+    font-size: 13rem;
+    position: absolute;
+    font-family: $rubik;
+    font-weight: 600;
+    text-shadow: 3px 3px 10px rgb(17, 17, 17);
+    color: rgb(37, 37, 37);
+    right: 40px;
+    top: 100px;
+    z-index: -99999;
+    @include mobile {
+      font-size: 6.5rem;
+      top: 130px;
+      right: 20px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+
+    &-above {
+      margin-top: 0;
+    }
+
+    &-below {
+      margin-bottom: 0;
+      @include mobile {
+        margin: 30px 0 50px;
+      }
+    }
+  }
+
+  &__proj {
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__container-above > &__proj{
+    width: 20%;
+    margin-top: 50px;
+  }
+
+  &__container-below > &__proj{
+    width: 25%;
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__proj > &__backg {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    opacity: 0%;
+    transition: 0.25s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 100%;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    color: $primary-color;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    padding: 0;
+  }
+
+  &__text {
+    margin: 15px 0;
+    font-size: 1rem;
+    color: white;
+    font-family: $zcool;
+    @include md-desktop {
+      margin: 5px 0;
+    }
+  }
+
+  &__list {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+  }
+
+  &__item {
+    color: $primary-color;
+    padding: 5px 8px;
+    background-color: rgba(19, 190, 176, 0.300);
+    border-radius: 10px;
+    margin: 3px;
+    font-family: $zcool;
+    font-size: 0.8rem;
+    @include md-desktop {
+      padding: 3px 5px;
+      font-size: 0.7rem;
+    }
+  }
+}
