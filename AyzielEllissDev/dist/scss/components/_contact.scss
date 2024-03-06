@@ -1,0 +1,156 @@
+@import "../tools/mixins";
+.contact {
+  padding-left: $leftPaddingPc;
+  display: flex;
+  margin: $topmarginPc 0 100px;
+  @include sm-desktop {
+    flex-direction: column;
+    padding-right: 30px;
+  }
+  @include mobile {
+    padding: 0 $leftPaddingSp 50px $leftPaddingSp;
+    justify-content: center;
+    margin-top: 0;
+  }
+  
+
+  &__form {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  &__form-top {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: #26ffc2;
+  }
+
+  &__name{
+    width: 48%;
+    @include FormDesign;
+  }
+
+  &__email {
+    width: 48%;
+    @include FormDesign;
+  }
+
+  &__form-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__subject {
+    @include FormDesign;
+  }
+
+  &__message {
+    @include FormDesign;
+    max-width: 100%;
+    min-width: 99%;
+  }
+
+  &__side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__info {
+    display: flex;
+    color: $secondary-color;
+    font-size: 1.5rem;
+    font-family: $jost;
+    font-weight: 400;
+    margin-bottom: 10px;
+    min-width: 200px;
+    align-items: center;
+    gap: 50px;
+    padding: 16px;
+    @include mobile {
+      font-size: 1.2rem;
+      gap: 25px;
+      padding: 10px;
+    }
+    
+    
+    &:hover {
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+
+  &__links {
+    min-width: 400px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    @include mobile {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    color: white;
+    background-color: #181818;
+    font-size: 1.5rem;
+    margin: auto;
+    display: flex;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-family: $jost;
+    position: relative;
+    @include mobile {
+      height: 50px;
+      width: 50px;
+      font-size: 1rem;
+    }
+
+    &:hover {
+      color: #181818;
+      background-color: white;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      line-height: 60px;
+      border-radius: 50%;
+      opacity: 0;
+      box-shadow: 0 0 0 1px #fff;
+      transition: all .2s ease-in-out;
+      border: 1px solid white;
+      z-index: -1;
+    }
+
+    &:hover:after {
+      opacity: 1;  
+      width: 90px;
+      height: 90px;
+    }
+  }
+  
+
+  &__text {
+    color: #aaaaaa67;
+    font-size: .9rem;
+  }
+}

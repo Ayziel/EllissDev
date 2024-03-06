@@ -1,0 +1,54 @@
+.navigation {
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 120px;
+  height: 100%;
+  color: #3f4b4f;
+  justify-content: space-between;
+}
+.navigation__logo-container {
+  background-color: #000000;
+  padding: 20px 15px;
+}
+.navigation__logo {
+  width: 100%;
+}
+.navigation__title {
+  color: #666666;
+  font-family: "ZCOOL KuaiLe", cursive;
+  font-size: 0.65rem;
+  text-align: center;
+}
+.navigation__text-list {
+  margin-top: 30px;
+}
+.navigation__text {
+  padding: 15px 10px;
+  text-align: center;
+  border-top: 0.5px solid #212121;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: 0.25s;
+}
+.navigation__text:last-child {
+  border-bottom: 0.5px solid #212121;
+}
+.navigation__text:hover {
+  color: #26ffc2;
+  cursor: pointer;
+}
+.navigation__icon-list {
+  margin: 30px 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+  transition: 0.25s;
+}
+.navigation__icon:hover:hover {
+  color: #26ffc2;
+  cursor: pointer;
+}/*# sourceMappingURL=navigation.css.map */

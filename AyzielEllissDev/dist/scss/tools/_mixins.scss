@@ -1,0 +1,58 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin deafultwidth {
+  width: $max-width;
+  max-width: 95%;
+  margin: 0 auto;
+  @include mobile {
+    max-width: 90%;
+  }
+}
+
+@mixin FormDesign {
+  background-color: #2e2d2d;
+  border: none;
+  box-shadow: none;
+  padding: 1em;
+  color: #26ffc2;
+}
+
+@mixin mobile {
+  @media screen and (max-width: $sp-view) {
+    @content;
+  }
+}
+
+@mixin sm-desktop {
+  @media screen and (max-width: 980px) {
+    @content;
+  }
+}
+
+@mixin md-desktop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: ($sp-view + 1px)) {
+    @content;
+  }
+}
+
+@mixin pc-view {
+  @media screen and (max-width: ($sp-view)) {
+      display: none;
+  }
+}
+
+@mixin sp-view {
+  @media screen and (min-width: ($sp-view + 1px)) {
+      display: none;
+  }
+}

@@ -1,0 +1,42 @@
+@import "../tools/mixins";
+
+.element {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  padding: 2px 0;
+  color: $html;
+  font-family: $zcool;
+  font-size: 0.85rem;
+  font-weight: 700;
+  @include mobile {
+    font-size: 0.65rem;
+  }
+}
+
+.title {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  color: $primary-color;
+  font-family: $rubik;
+  margin-bottom: 20px;
+  @include mobile {
+    font-size: clamp(2.5rem, 3vw, 3rem);
+  }
+}
+
+.text {
+  color: $primary-text;
+  font-family: $jost;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+
+.sp {
+ @include sp-view
+}
+
+.pc {
+  @include pc-view
+}
