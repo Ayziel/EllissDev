@@ -91,21 +91,20 @@ html {
   cursor: pointer;
 }
 .navigation__icon-list {
-  margin: 30px 0 100%;
+  margin: 30px 0px 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20%;
   transition: 0.25s;
 }
 .navigation__icon {
   font-size: 1rem;
+  margin: 0 10px;
 }
 .navigation__icon:hover {
   color: #26ffc2;
   cursor: pointer;
 }
-
 .navigation-sp {
   width: 100%;
   z-index: 999;
